@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* All Blog Posts title */
+  .allpost {
+    text-align: center;
+    
+    margin: 20px 0;
+  }
+  
+  .allpost h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual post container */
+  .onepost {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .onepost .title h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .onepost p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Buttons */
+  .onepost button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .onepost button:hover {
+    background-color: #0056b3;
+  }
+  
+  .onepost button:nth-child(2) {
+    background-color: #FFC107;
+  }
+  
+  .onepost button:nth-child(2):hover {
+    background-color: #cc9a06;
+  }
+  
+  .onepost button:nth-child(3) {
+    background-color: #6C757D;
+  }
+  
+  .onepost button:nth-child(3):hover {
+    background-color: #5a6268;
+  }
+  
