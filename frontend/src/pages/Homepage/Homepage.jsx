@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Homepage.css";
 import { fetchPosts, deletePost } from "../../servies/api";
 import Navbar from "../../components/Navbar/Navbar";
-
 import { format } from "date-fns";
 
 const Homepage = () => {
@@ -32,23 +31,27 @@ const Homepage = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="allpost">
-        {/* <h1>All Blog Posts</h1> */}
-        <Navbar />
+        <h1>All Blog Posts</h1>
+        {posts.length === 0 ? (
+          <p>No posts available. Create a new post!</p>
+        ) : (
+          posts.map((post) => (
+            <div key={post._id} className="onepost">
+              <div className="title">
+                <h2>{post.title}</h2>
+              </div>
+              <p>{post.content}</p>
+              <p>Date: {format(new Date(post.date), "dd-MM-yyyy")}</p>
+              <p>Published by: {post.author}</p>
+              <button onClick={() => deleteblog(post._id)}>Delete</button>
+              <button>Edit</button>
+              <button>Commands</button>
+            </div>
+          ))
+        )}
       </div>
-      {posts.map((post) => (
-        <div key={post._id} className="onepost">
-          <div className="title">
-            <h2>{post.title}</h2>
-          </div>
-          <p>{post.content}</p>
-          <p> Date :-{format(new Date(post.date), "dd-mm-yyyy")}</p>
-          <p>published by {post.author}</p>
-          <button onClick={() => deleteblog(post._id)}>Delete</button>
-          <button>Edit</button>
-          <button>commands</button>
-        </div>
-      ))}
     </div>
   );
 };
