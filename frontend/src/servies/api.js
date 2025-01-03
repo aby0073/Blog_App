@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:4001/",
+  baseURL: "https://blog-app-23du.onrender.com",
 });
 
 export const fetchPosts = (page = 1, limit = 5) =>
