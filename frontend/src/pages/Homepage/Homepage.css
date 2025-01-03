@@ -5,7 +5,7 @@ body {
     background-color: #f9f9f9;
   }
   
-  /* All Blog Posts title */
+ 
   .allpost {
     text-align: center;
     
@@ -18,7 +18,6 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Individual post container */
   .onepost {
     background: white;
     border-radius: 8px;
@@ -41,7 +40,6 @@ body {
     margin: 5px 0;
   }
   
-  /* Buttons */
   .onepost button {
     margin-right: 10px;
     padding: 10px 15px;
@@ -71,5 +69,35 @@ body {
   
   .onepost button:nth-child(3):hover {
     background-color: #5a6268;
+  }
+  .commands {
+    margin-top: 10px;
+  }
+  
+  .commands button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .commands button:hover {
+    background-color: #0056b3;
+  }
+  
+  .onepost {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .title h2 {
+    color: #333;
   }
   

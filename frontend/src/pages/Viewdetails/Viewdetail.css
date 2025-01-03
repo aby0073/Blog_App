@@ -1,0 +1,38 @@
+
+.view-details-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .view-details-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .view-details-content {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .view-details-author,
+  .view-details-date {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .view-details-loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007bff;
+    font-style: italic;
+  }
+  

@@ -3,9 +3,11 @@ import "./Homepage.css";
 import { fetchPosts, deletePost } from "../../servies/api";
 import Navbar from "../../components/Navbar/Navbar";
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getPosts = async () => {
@@ -29,6 +31,14 @@ const Homepage = () => {
     }
   };
 
+  const viewDetails = (id) => {
+    navigate(`/post/${id}`);
+  };
+
+  const editPost = (id) => {
+    navigate(`/edit/${id}`);
+  };
+
   return (
     <div>
       <Navbar />
@@ -45,9 +55,11 @@ const Homepage = () => {
               <p>{post.content}</p>
               <p>Date: {format(new Date(post.date), "dd-MM-yyyy")}</p>
               <p>Published by: {post.author}</p>
-              <button onClick={() => deleteblog(post._id)}>Delete</button>
-              <button>Edit</button>
-              <button>Commands</button>
+              <div className="commands">
+                <button onClick={() => viewDetails(post._id)}>View Details</button>
+                <button onClick={() => editPost(post._id)}>Edit</button>
+                <button onClick={() => deleteblog(post._id)}>Delete</button>
+              </div>
             </div>
           ))
         )}
