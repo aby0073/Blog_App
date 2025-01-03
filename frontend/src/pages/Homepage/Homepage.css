@@ -1,103 +1,163 @@
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
- 
-  .allpost {
-    text-align: center;
-    
-    margin: 20px 0;
-  }
-  
-  .allpost h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .onepost {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-  }
-  
-  .onepost .title h2 {
-    font-size: 1.8rem;
-    color: #007BFF;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  .onepost p {
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  .onepost button {
-    margin-right: 10px;
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .onepost button:hover {
-    background-color: #0056b3;
-  }
-  
-  .onepost button:nth-child(2) {
-    background-color: #FFC107;
-  }
-  
-  .onepost button:nth-child(2):hover {
-    background-color: #cc9a06;
-  }
-  
-  .onepost button:nth-child(3) {
-    background-color: #6C757D;
-  }
-  
-  .onepost button:nth-child(3):hover {
-    background-color: #5a6268;
-  }
-  .commands {
-    margin-top: 10px;
-  }
-  
-  .commands button {
-    margin: 5px;
-    padding: 8px 12px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .commands button:hover {
-    background-color: #0056b3;
-  }
-  
-  .onepost {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .title h2 {
-    color: #333;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+.allpost {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.allpost h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+
+.onepost {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.onepost .title h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0 0 10px;
+}
+
+.onepost p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 5px 0;
+}
+
+
+.commands {
+  margin-top: 15px;
+}
+
+.commands button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.commands button:hover {
+  transform: translateY(-2px);
+}
+
+.commands button:first-of-type {
+  background-color: #a2b9bc;
+  color: #fff;
+}
+
+.commands button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+.commands button:nth-of-type(2) {
+  background-color: #a2b9bc;
+  color: #fff;
+}
+
+.commands button:nth-of-type(2):hover {
+  background-color: #0056b3;
+}
+
+.commands button:nth-of-type(3) {
+  background-color: #a2b9bc;
+  color: #fff;
+}
+
+.commands button:nth-of-type(3):hover {
+  background-color: #0056b3;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.onepost {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+
+.onepost:hover {
+  background-color: #f7f7f7;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-5px); 
+}
+
+
+.onepost:hover .title h2 {
+  color: #0056b3; 
+}
+
+
+.onepost:hover .commands button {
+  background-color: #0056b3;
+}
+

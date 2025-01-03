@@ -21,15 +21,27 @@ router.use(bodyparser.json());
         res.status(400).json({message:error.message});
     }
  });
- router.get('/posts',async(req,res)=>{            //get
-    const blog=await Blog.find().sort({date:-1});
-    try{
-        res.json(blog);
-    }catch(error){
-        res.status(500).json({message:error.message})
+ router.get('/posts', async (req, res) => {
+    const { page = 1, limit = 5 } = req.query; 
+    
+    try {
+      const total = await Blog.countDocuments();
+      const blogs = await Blog.find()
+        .sort({ date: -1 }) 
+        .skip((page - 1) * limit) 
+        .limit(parseInt(limit)); 
+  
+      res.json({
+        posts: blogs, 
+        total, 
+        currentPage: parseInt(page), 
+        totalPages: Math.ceil(total / limit), 
+      });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
     }
- })
- router.get('/posts/:id',async(req,res)=>{            //get by id
+  });
+ router.get('/posts/:id',async(req,res)=>{            
     const blog=await Blog.findById(req.params.id);
     try{
         res.json(blog);
@@ -53,5 +65,7 @@ router.use(bodyparser.json());
         res.status(500).json({message:error.message});
     }
 });
+
+
  
 module.exports=router;

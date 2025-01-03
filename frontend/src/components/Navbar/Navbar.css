@@ -1,43 +1,59 @@
-.navbar{
-    padding: 20px 0px;
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #a2b9bc;
-}
-.navbar .logo{
-    width: 150px;
-}
-.navbar-menu{
-    display: flex;
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    color: #040303;
+  }
+  
+  .navbar-menu {
     list-style: none;
-    gap: 20px;
-    color: #49557e;
-    font-size: 18px;
-    
-}
-.navbar-right{
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #040303;
+    font-size: 1rem;
+  }
+  
+  .navbar-right {
     display: flex;
     align-items: center;
-    gap: 40px;
-}
-.navbar button{
-    background: transparent;
-    font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 30px;
-    border-radius: 50px;
+  }
+  
+  .navbar-right button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
     cursor: pointer;
-    transition: 0.3s;
-}
-.navbar button:hover{
-    background-color: #fff4f2;
-}
-.navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-}
-.navbar li{
-    cursor: pointer;
-}
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-right button:hover {
+    background-color: #0056b3;
+  }
+  
+  .navbar-right button:first-of-type {
+    background-color:  #007bff;
+  }
+  
+  .navbar-right button:first-of-type:hover {
+    background-color: #a2b9bc;
+  }
+  
