@@ -1,3 +1,6 @@
+Abin Roy S
+mern1
+
 # Blog Application Backend
 
 This repository contains the backend code for the Blog Application, built using Node.js, Express.js, and MongoDB.
